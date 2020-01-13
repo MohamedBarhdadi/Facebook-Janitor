@@ -10,6 +10,7 @@ function createWindow () {
   win = new BrowserWindow({
     width: 800,
     height: 600,
+    title: "Facebook Janitor",
     webPreferences: {
       nodeIntegration: true
     }
@@ -19,7 +20,7 @@ function createWindow () {
   win.loadFile('src/index.html')
 
   // Open the DevTools.
-  //win.webContents.openDevTools()
+  win.webContents.openDevTools()
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -49,7 +50,7 @@ function createWindow () {
           submenu:[
             {label: 'Github page',  
             click(){
-              shell.openExternal('https://github.com/weskerfoot/DeleteFB.git')
+              shell.openExternal('https://github.com/MohamedBarhdadi/Facebook-Janitor')
             }
           }
 
