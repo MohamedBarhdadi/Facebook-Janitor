@@ -4,26 +4,74 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/semantic/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="css/style/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <!-- Work-around for jquery error w.r.t. semantic.min.js in-->
     <script>
       const jQuery = require('jquery')
       const $ = jQuery
       require('./css/semantic/semantic.min.js')
     </script>
+
+<script type="text/javascript">
+  $( document ).ready (function(){
+    $('.ui.form')
+  .form({
+    fields: {
+      
+      email : 'empty',
+      password :'empty'
+      
+     
+    }
+  });
+
+ 
+  })
+
+</script>
    
 
     <title>Facebook Janitor</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
   </head>
   <body>
-    <div class="container"></div>
-    <div class ="head">
+    <div class="container">
 
-      Facebook Janitor
-      
+      <div class ="head">
+        <i class="trash alternate icon"></i>
+
+        Facebook Janitor
+        
+      </div>
+
+      <form class="ui large form">
+        <div class="ui stacked segment">
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="user icon"></i>
+              <input type="text" name="email" placeholder="E-mail address">
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="lock icon"></i>
+              <input type="password" name="password" placeholder="Password">
+            </div>
+          </div>
+          <div class="ui fluid inverted red submit button">Login</div>
+        </div>
+  
+        <div class="ui error message"></div>
+  
+      </form>
+
+     
+
+
     </div>
+    
       
-    </div>
+  
   
   </body>
 </html>

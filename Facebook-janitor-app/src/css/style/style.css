@@ -1,8 +1,40 @@
+/* CSS */
+
 .container {
     height:100vh;
-    z-index: 1;
-    background-color: #2d3436;
-    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    position: relative;
+    background-color: #001f3f;
 }
+
+.container .head{
+    position: absolute;
+    font-family: 'Lato';
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color:#FF4136;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.container .form {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+.container .form .stacked {
+    background-color: #001f3f;
+}
+
+.container .form button{
+    text-align: center;
+}
+
+
 
 
