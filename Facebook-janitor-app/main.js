@@ -9,7 +9,7 @@ function createWindow () {
   // Create the browser window.
   win = new BrowserWindow({
     width: 800,
-    height: 600,
+    height: 700,
     title: "Facebook Janitor",
     webPreferences: {
       nodeIntegration: true
@@ -17,7 +17,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  win.loadFile('src/index.html')
+  win.loadFile('src/main.html')
 
   // Open the DevTools.
  // win.webContents.openDevTools()
