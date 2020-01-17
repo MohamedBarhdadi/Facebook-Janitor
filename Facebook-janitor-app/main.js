@@ -94,5 +94,6 @@ const ipc = require('electron').ipcMain;
 ipc.on('synMessage', (event, args) => {
 
   console.log(args);
-  event.returnValue = 'Main said I received your Inputed values';
+  console.log(args.email);
+  event.returnValue = 'Clean-up initiated!';
 });

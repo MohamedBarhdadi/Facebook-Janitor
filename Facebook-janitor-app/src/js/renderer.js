@@ -12,11 +12,7 @@ syncBtn.addEventListener('click', () => {
     var email = $form.form('get value', 'email');
     var password = $form.form('get value', 'password');
     var deletePreferences = $form.form('get value', 'deletePreferences');
-
-    console.log(email);
-
-
-   let reply = ipc.sendSync('synMessage', 'allFields', 'email', 'password', 'deletePreferences');
+    let reply = ipc.sendSync('synMessage',allFields);
    console.log(reply);
 
    replyDiv.innerHTML = reply;
