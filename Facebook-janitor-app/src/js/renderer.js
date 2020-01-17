@@ -1,7 +1,8 @@
-const
-    ipc      = require('electron').ipcRenderer,
+const ipc = require('electron').ipcRenderer
 
-    syncBtn  = document.querySelector('#submit-btn');
+
+window.onload=function(){
+const  syncBtn  = document.querySelector('#submit-btn');
 
 let replyDiv = document.querySelector('#reply');
 
@@ -12,11 +13,13 @@ syncBtn.addEventListener('click', () => {
     var password = $form.form('get value', 'password');
     var deletePreferences = $form.form('get value', 'deletePreferences');
 
+    console.log(email);
 
-    let reply = ipc.sendSync('synMessage', 'allFields', 'email', 'password', 'deletePreferences');
 
-    replyDiv.innerHTML = reply;
+   let reply = ipc.sendSync('synMessage', 'allFields', 'email', 'password', 'deletePreferences');
+   console.log(reply);
+
+   replyDiv.innerHTML = reply;
 });
 
-
-
+}

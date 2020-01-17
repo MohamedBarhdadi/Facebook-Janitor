@@ -34,7 +34,7 @@ function createWindow () {
       {
           label: 'Menu',
           submenu: [
-            {label: 'User Guide'},  
+            {label: 'User Guide'},
             {type: 'separator'},
             {
               label: 'Exit',
@@ -48,7 +48,7 @@ function createWindow () {
         {
           label: 'Github',
           submenu:[
-            {label: 'Github page',  
+            {label: 'Github page',
             click(){
               shell.openExternal('https://github.com/MohamedBarhdadi/Facebook-Janitor')
             }
@@ -57,13 +57,13 @@ function createWindow () {
           ]
         }
 
-      
+
     ])
 
-    Menu.setApplicationMenu(menu); 
-    
+    Menu.setApplicationMenu(menu);
+
 }
-  
+
 
 
 // This method will be called when Electron has finished
@@ -92,6 +92,7 @@ app.on('activate', () => {
 const ipc = require('electron').ipcMain;
 
 ipc.on('synMessage', (event, args) => {
+
   console.log(args);
   event.returnValue = 'Main said I received your Inputed values';
 });
