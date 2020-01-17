@@ -7,15 +7,27 @@ const  syncBtn  = document.querySelector('#submit-btn');
 let replyDiv = document.querySelector('#reply');
 
 syncBtn.addEventListener('click', () => {
-    let $form = $(('.ui.form'));
-    let allFields = $form.form('get values');
-    var email = $form.form('get value', 'email');
-    var password = $form.form('get value', 'password');
-    var deletePreferences = $form.form('get value', 'deletePreferences');
-    let reply = ipc.sendSync('synMessage',allFields);
-   console.log(reply);
 
-   replyDiv.innerHTML = reply;
+    // form is valid (both email and name)
+    if( $('.ui.form').form('is valid')) {
+
+        let $form = $(('.ui.form'));
+        let allFields = $form.form('get values');
+
+        let reply = ipc.sendSync('synMessage',allFields);
+        console.log(reply);
+
+
+        //hide form after pressing a button
+        document.getElementById('form').style.display = 'none';
+
+        //show animation and message
+        replyDiv.innerHTML = reply;
+        document.getElementById('animation').style.display = 'block';
+
+    }
+
+
 });
 
 }

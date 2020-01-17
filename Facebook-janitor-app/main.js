@@ -20,7 +20,7 @@ function createWindow () {
   win.loadFile('src/main.html')
 
   // Open the DevTools.
- win.webContents.openDevTools()
+ // win.webContents.openDevTools()
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -94,6 +94,5 @@ const ipc = require('electron').ipcMain;
 ipc.on('synMessage', (event, args) => {
 
   console.log(args);
-  console.log(args.email);
   event.returnValue = 'Clean-up initiated!';
 });

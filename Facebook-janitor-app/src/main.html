@@ -48,7 +48,7 @@
         </div>
     </header>
 
-    <form class="ui large form">
+    <form class="ui large form" id="form">
         <!--checkboxes-->
         <div class="logical-section">
             <div class="heading-text">Select what you want to delete from your activity log:</div>
@@ -104,14 +104,24 @@
                         <input type="password" name="password" placeholder="Password">
                     </div>
                 </div>
-                <button class="ui fluid  red  big button" id="submit-btn" type="button"  >Start cleaning</button>
+                <button class="ui fluid  red big button" id="submit-btn" type="button"  >Start cleaning</button>
             <div class="ui error message"></div>
 
         </div>
 
     </form>
 
-    <div id = 'reply'> </div>
+
+
+    <header class=" ui centered grid" >
+        <div class="row">
+            <img src="assets/images/animation.gif" class="ui center huge image" id='animation' style="display: none">
+        </div>
+        <div class="row">
+            <div id = 'reply' class="logo-title centered"></div>
+        </div>
+    </header>
+
 </main>
 
 

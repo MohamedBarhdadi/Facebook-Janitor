@@ -1,7 +1,4 @@
 /* CSS */
-input[type=checkbox]{
-    margin-bottom: 40px !important;
-}
 .container {
     max-width: 800px;
     padding: 20px 110px;
