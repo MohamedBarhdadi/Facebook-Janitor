@@ -1,5 +1,7 @@
 /* CSS */
-
+input[type=checkbox]{
+    margin-bottom: 40px !important;
+}
 .container {
     max-width: 800px;
     padding: 20px 110px;
@@ -53,5 +55,5 @@
 
 /*override checkbox color*/
 .ui.toggle.checkbox input:checked~.box:before, .ui.toggle.checkbox input:checked~label:before {
-    background-color: ##ff4136!important;
+    background-color: #ff4136!important;
 }

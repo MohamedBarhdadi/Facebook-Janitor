@@ -20,7 +20,7 @@ function createWindow () {
   win.loadFile('src/main.html')
 
   // Open the DevTools.
- // win.webContents.openDevTools()
+ win.webContents.openDevTools()
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -87,3 +87,11 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+//renderer
+const ipc = require('electron').ipcMain;
+
+ipc.on('synMessage', (event, args) => {
+  console.log(args);
+  event.returnValue = 'Main said I received your Inputed values';
+});
