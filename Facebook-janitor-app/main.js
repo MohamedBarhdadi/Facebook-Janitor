@@ -9,7 +9,7 @@ function createWindow () {
   // Create the browser window.
   win = new BrowserWindow({
     width: 800,
-    height: 600,
+    height: 700,
     title: "Facebook Janitor",
     webPreferences: {
       nodeIntegration: true
@@ -17,10 +17,10 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  win.loadFile('src/index.html')
+  win.loadFile('src/main.html')
 
   // Open the DevTools.
- // win.webContents.openDevTools()
+ win.webContents.openDevTools()
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -87,3 +87,11 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+//renderer
+const ipc = require('electron').ipcMain;
+
+ipc.on('synMessage', (event, args) => {
+  console.log(args);
+  event.returnValue = 'Main said I received your Inputed values';
+});

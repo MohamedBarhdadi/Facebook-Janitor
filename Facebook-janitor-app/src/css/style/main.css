@@ -1,0 +1,59 @@
+/* CSS */
+input[type=checkbox]{
+    margin-bottom: 40px !important;
+}
+.container {
+    max-width: 800px;
+    padding: 20px 110px;
+}
+
+.logo-container > img{
+    width: 145px !important;
+    margin-right: 15px;
+}
+.logo-container{
+    margin-bottom: 40px !important;
+}
+
+.logo-title{
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #403D3D;
+}
+
+.regular-text{
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px !important;
+    color: #000000;
+}
+
+.heading-text{
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 33px;
+    padding-bottom: 15px;
+    color: #000000;
+}
+
+.logo-container .regular-text{
+    width: 330px;
+}
+
+.logical-section{
+    padding-bottom: 30px;
+}
+.input-section{
+    max-width: 500px;
+}
+
+/*override checkbox color*/
+.ui.toggle.checkbox input:checked~.box:before, .ui.toggle.checkbox input:checked~label:before {
+    background-color: #ff4136!important;
+}
