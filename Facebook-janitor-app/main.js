@@ -1,4 +1,5 @@
 const { app, BrowserWindow, Menu } = require('electron')
+const deletePosts = require('facebook-janitor').default
 const shell = require('electron').shell
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -102,8 +103,12 @@ app.on('activate', () => {
 //renderer
 const ipc = require('electron').ipcMain;
 
-ipc.on('synMessage', (event, args) => {
+ipc.on('synMessage', async (event, args) => {
+  const { email, password, deletePreferences } = args;
 
-  console.log(args);
+  console.log({ email, deletePreferences });
+
+  await deletePosts(args);
+
   event.returnValue = 'Clean-up initiated!';
 });
