@@ -106,11 +106,13 @@ const ipc = require('electron').ipcMain;
 ipc.on('synMessage', async (event, args) => {
   const { email, password, deletePreferences } = args;
 
-  console.log({ email, deletePreferences });
+  const filters = deletePreferences.filter(preference => Boolean(preference));
+
+  console.log({ email, filters });
 
   try {
     event.returnValue = 'Clean-up initiated!';
-    await deletePosts(args);
+    await deletePosts({ email, password, filters });
 
     // TODO: Inform user that the cleanup has succeeded
   } catch(error) {
