@@ -1,4 +1,3 @@
-Facebook-Janitor-app/node_modules/
-.idea
 node_modules/
-/Facebook-Janitor-app/node_modules/
+.idea
+.DS_Store
