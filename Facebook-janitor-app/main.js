@@ -111,9 +111,9 @@ ipc.on('synMessage', async (event, args) => {
   try {
     event.returnValue = 'Clean-up initiated!';
     await deletePosts(args);
+
+    // TODO: Inform user that the cleanup has succeeded
   } catch(error) {
     // TODO: Inform user that an error has occured
   }
-
-  // TODO: Inform user that the cleanup has concluded
 });
