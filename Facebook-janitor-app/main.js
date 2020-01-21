@@ -108,7 +108,12 @@ ipc.on('synMessage', async (event, args) => {
 
   console.log({ email, deletePreferences });
 
-  await deletePosts(args);
+  try {
+    event.returnValue = 'Clean-up initiated!';
+    await deletePosts(args);
+  } catch(error) {
+    // TODO: Inform user that an error has occured
+  }
 
-  event.returnValue = 'Clean-up initiated!';
+  // TODO: Inform user that the cleanup has concluded
 });
