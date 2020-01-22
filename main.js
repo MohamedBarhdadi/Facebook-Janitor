@@ -116,9 +116,9 @@ ipc.on('synMessage', async (event, args) => {
     await deletePosts({ email, password, filters });
 
     //Inform user that the cleanup has succeeded
-    msg = 'Clean-up successfully finished!';
-    event.sender.send('successReply', msg);
+    event.reply('successReply', 'Clean-up successfully finished!');
   } catch (error) {
-    // TODO: Inform user that an error has occured
+    //Inform user that an error occurred
+    event.reply('errorReply', 'An error occurred whilst cleaning');
   }
 });
