@@ -60,7 +60,7 @@
         </div>
       </header>
 
-      <form class="ui large form" id="form">
+      <form class="ui large form" id="form" onsubmit="return false">
         <!--checkboxes-->
         <div class="logical-section">
           <div class="heading-text">
@@ -150,11 +150,7 @@
           </div>
 
           <!-- TODO: Submit form on keyboard eneter press  -->
-          <button
-            class="ui fluid  red big button"
-            id="submit-btn"
-            type="button"
-          >
+          <button class="ui fluid red big button" id="submit-btn" type="submit">
             Start cleaning
           </button>
           <div class="ui error message"></div>
