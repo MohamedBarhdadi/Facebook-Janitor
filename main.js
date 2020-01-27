@@ -1,5 +1,5 @@
 const { app, BrowserWindow, Menu } = require('electron');
-const deletePosts = require('facebook-janitor').default;
+const deleteFacebookActivities = require('facebook-janitor').default;
 const shell = require('electron').shell;
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -113,7 +113,7 @@ ipc.on('synMessage', async (event, args) => {
 
   try {
     event.returnValue = 'Clean-up initiated!';
-    await deletePosts({ email, password, filters });
+    await deleteFacebookActivities({ filters })({ email, password });
 
     //Inform user that the cleanup has succeeded
     event.reply('successReply', 'Clean-up successfully finished!');
