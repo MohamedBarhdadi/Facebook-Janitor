@@ -30,7 +30,7 @@
     "prettier": "^1.19.1"
   },
   "devDependencies": {
-    "electron": "7.1.8"
+    "electron": "7.2.4"
   },
   "husky": {
     "hooks": {
