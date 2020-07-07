@@ -25,7 +25,7 @@
     "concat-map": "^0.0.1",
     "facebook-janitor": "^0.3.3",
     "husky": "^4.0.10",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lint-staged": "^10.0.1",
     "prettier": "^1.19.1"
   },
